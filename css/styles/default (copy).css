@@ -1,24 +1,23 @@
 ul#navigation li.external:hover .icon, ul#navigation li.currentmenu .icon{
-	/* color: #b8860b; */
-	color: #ad66a9;
+	color: #03cc85;
 }
 .ul-boxed li {
 	border-left-color:#03cc85;
 }
 ul.ul-card li .dy .year {
-	background-color: #49beb4;
+	background-color: #03cc85;
 }
 ul.ul-dates div.dates span {
 	background-color: #03cc85;
 }
 ul.timeline li .date {
-	background: #49beb4;
+	background: #03cc85;
 }
 ul.timeline li .data {
-	border-left-color: #49beb4;
+	border-left-color: #03cc85;
 }
 .ul-withdetails li .imageoverlay {
-	background: #49beb4;
+	background: #03cc85;
 }
 .cd-active.cd-dropdown > span {
 	color: #03cc85;
@@ -38,16 +37,16 @@ ul.timeline li .data {
 
 /* secondary color */
 ul.ul-card li .dy .degree {
-	background-color: #61bab0;
+	background-color: #03bb7a;
 }
 ul.ul-dates div.dates span:last-child {
 	background-color: #03bb7a;
 }
 ul.timeline li.open .circle {
-	background-color: #56a79d;
+	background-color: #03bb7a;
 }
 ul.timeline li.open .data {
-	border-color: #56a79d;
+	border-color: #03bb7a;
 }
 #labp-heads-wrap {
 	background-color: #03bb7a;

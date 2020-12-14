@@ -77,7 +77,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6 {
 	-ms-user-select: none;
 	user-select: none;
 	width: 250px;
-	background: #3c6232;
+	background: #2b2b2b;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -191,9 +191,9 @@ ul#navigation li {
 	display: block;
 	float: none;
 	clear: both;
-	background: #729968;
-	border-top: 1px solid #81997b;
-	border-bottom: 1px solid #255b21d7;
+	background: #303030;
+	border-top: 1px solid #373737;
+	border-bottom: 1px solid #2B2B2B;
 
 	-webkit-transition: background 0.5s;
 	-moz-transition: background 0.5s;
@@ -228,9 +228,9 @@ ul#navigation li.currentmenu a {
 }*/
 
 ul#navigation li.currentmenu {
-	background: #629457;
-	border-top: 1px solid #1a5211;
-	border-bottom: 1px solid #1a5211;
+	background: #363636;
+	border-top: 1px solid #3d3d3d;
+	border-bottom: 1px solid #252525;
 }
 
 
@@ -239,8 +239,8 @@ ul#navigation li .text {
 	margin-left: 50px;
 	line-height: 45px;
 
-	-webkit-box-shadow: -3px 0 5px -4px #36602c;
-	box-shadow: -3px 0 5px -4px #36602c;
+	-webkit-box-shadow: -3px 0 5px -4px #000;
+	box-shadow: -3px 0 5px -4px #000;
 }
 
 ul#navigation li .icon {
@@ -256,8 +256,8 @@ ul#navigation li .icon {
 	bottom: 0;
 	left: 0;
 	width: 100%;
-	background: #14540d;
-	border-top: 1px solid #15400e;
+	background: #202020;
+	border-top: 1px solid #1A1A1A;
 	width: 250px;
 	z-index: 2;
 	height: 45px;
@@ -440,9 +440,9 @@ ul.ul-card li .dy span {
 	margin: 0;
 }
 
-/* ul.ul-card li .dy .degree {
+/*ul.ul-card li .dy .degree {
 	background-color: #03bb7a;
-} */
+}*/
 
 ul.ul-card li .dy .year {
 	/*background-color: #03cc85;*/
