@@ -135,16 +135,74 @@
         <div class="pagecontents">
             <div class="section color-2">
                 <div class="section-container">
-
                     <div class="row">
                         <div class="col-md-12 col-md-offset-0">
                             <ul class="ul-withdetails">
-
                                 <li>
                                     <div class="row">
                                         <div class="col-sm-4 col-md-3">
                                             <div class="image">
-                                                <img alt="image" src="img/projects/key.png" class="img-responsive">
+                                                <img alt="image" src="img/projects/tri_cvpr22.png" class="img-responsive">
+                                                <div class="imageoverlay">
+                                                    <i class="icon icon-search"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-9">
+                                            <div class="meta">
+                                                <h3>Self-supervised Object Discovering with Motion Cue</h3>
+                                                <p>June 2021 - Nov. 2021</p>
+                                                <p class="paraIndent">Supervisor: Martial Hebert, Professor, CMU; Pavel Tokmakov, Research Scientist, TRI.</p>
+                                                <p>Self-suppervised object-centric feature representations with a weak learning signal from motion.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <img src="files/tri_cvpr22.png" width="100%"> </p>
+                                        
+                                        <p>We studies the problem of object discovery -- separating objects from the background without manual labels. Existing approaches rely on appearance cues, such as color, texture and location, to group pixels into object-like regions. However, by relying on appearance alone, these methods fail to reliably separate objects from the background in cluttered scenes. This is a fundamental limitation, since the definition of an object is inherently ambiguous and context-dependent. To resolve this ambiguity, in this work we choose to focus on dynamic objects -- entities that are capable of moving independently in the world. </p>
+                                        <p>We then scale the recent auto-encoder based frameworks for unsupervised object discovery from toy, synthetic images to complex, real world scenes by simplifying their architecture, and
+                                            augmenting the resulting model with a weak learning signal from a motion segmentation algorithm. We demonstrate that, despite only capturing a small subset of the objects, this signal is enough to bias the model, which then learns to segment both moving and static instances of dynamic objects. 
+                                            We show that this model scales to our newly collected, photo-realistic synthetic dataset with street driving scenarios. Additionally, we leverage ground truth segmentation and flow annotations in this dataset for thorough ablation and evaluation.
+                                            Finally, our experiments on the real-world KITTI dataset demonstrate that the proposed approach outperforms both heuristic- and learning-based methods by capitalizing on motion cues.</p>
+                                        <p>The paper of this project is under review. See the paper <a target="_blank" href="files/ObjDiscover.pdf"><strong>here</strong></a>.</p>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-3">
+                                            <div class="image">
+                                                <img alt="image" src="img/projects/sasnerf.png" class="img-responsive">
+                                                <div class="imageoverlay">
+                                                    <i class="icon icon-search"></i>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-8 col-md-9">
+                                            <div class="meta">
+                                                <h3>Neural Radiance Fields for Multiple Tasks</h3>
+                                                <p>June 2021 - Nov. 2021</p>
+                                                <p class="paraIndent">Supervisor: Martial Hebert, Professor, CMU; Yu-Xiong Wang, Assistant Professor, UIUC.</p>
+                                                <p>Extend Neural Radiance Fields from color image systhesis to simultaneously synthesizing RGB and corresponding multi-task labels.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details">
+                                        <img src="files/nerf.png" width="100%"> </p>
+                                        
+                                        <p>Comprehensive 3D scene understanding, both geometrically and semantically, is important for various real-world applications such as robot perception. Most of the existing work has focused on developing data-driven discriminative models for different scene analysis problems. In this project, we provides a new way for scene analysis from a generative modeling perspective, by leveraging the recent progress on implicit 3D representation and neural rendering. </p>
+                                        <p>Building upon the great success of Neural Radiance Fields (NeRFs), we develop scene analysis by synthesis with NeRF (SaS-NeRF) that is able to not only render photo-realistic RGB images from novel viewpoints, but also render various accurate scene properties (e.g., appearance, geometry and semantics) paired with the synthesized images. By doing so, we facilitate addressing a variety of scene understanding tasks under a unified framework, including semantic segmentation, surface normal estimation, reshading, 2D-keypoint detection, and edge detection. Our SaS-NeRF framework can be a powerful tool for bridging generative learning and discriminative learning and thus be beneficial to the investigation of a wide range of interesting problems, such as studying task relationships from a generative modeling perspective, facilitating downstream discriminative tasks as ways of data augmentation, and serving as auto-labeller.</p>
+                                        <p>The paper of this project is under review. See the paper <a target="_blank" href="files/SaSNeRF.pdf"><strong>here</strong></a>.</p>
+                                    </div>
+                                </li>
+                                
+                                <li>
+                                    <div class="row">
+                                        <div class="col-sm-4 col-md-3">
+                                            <div class="image">
+                                                <img alt="image" src="img/projects/mgm.png" class="img-responsive">
                                                 <div class="imageoverlay">
                                                     <i class="icon icon-search"></i>
                                                 </div>
@@ -164,7 +222,7 @@
                                         <img src="files/multitask.png" width="100%"> </p>
                                         <p>Generative modeling has recently shown great promise in computer vision, but it has mostly focused on synthesizing visually realistic images. In this project, motivated by multi-task learning of shareable feature representations, we consider a broader problem of learning a shared genera- tive model that is useful across various visual perception tasks. </p>
                                         <p>we propose a general multi-task oriented generative modeling (MGM) framework, by coupling a discriminative multi-task network with a generative network. While it is challenging to synthesize both RGB images and pixel-level annotations in multi-task scenarios, our framework enables us to use synthesized images paired with only weak annotations (i.e., image-level scene labels) to facilitate multiple visual tasks. Experimental evaluation on challenging multi-task benchmarks, including NYUv2 and Taskonomy, demonstrates that our MGM framework improves the performance of all the tasks by large margins, consistently outperforming state-of-the-art multi-task approaches.</p>
-                                        <p>We have sumitted a paper to CVPR 2021 regarding this project. See the paper <a target="_blank" href="files/multitask.pdf"><strong>here</strong></a></p>
+                                        <p>The paper of this project is under review. See the paper <a target="_blank" href="https://arxiv.org/abs/2106.13409"><strong>here</strong></a>.</p>
                                     </div>
                                 </li>
 
@@ -172,7 +230,7 @@
                                     <div class="row">
                                         <div class="col-sm-4 col-md-3">
                                             <div class="image">
-                                                <img alt="image" src="img/projects/chart.png"  class="img-responsive">
+                                                <img alt="image" src="img/projects/fbnet.png"  class="img-responsive">
                                                 <div class="imageoverlay">
                                                     <i class="icon icon-search"></i>
                                                 </div>
@@ -192,8 +250,7 @@
                                         <img src="files/bowtie.png" width="100%"> </p>
                                         <p class="paraIndent normalcolor"> Generative modeling has recently shown great promise in computer vision, but its success is often limited to separate tasks. Motivated by multi-task learning of shareable feature representations, we consider a novel problem of learning a shared generative model across various tasks. We instantiate it on the illustrative dual-task of joint few-shot recognition and novel-view synthesis: given only one or few images of a novel object from arbitrary views with only category annotation, we aim to simultaneously learn an object classifier and generate images of the object from new viewpoints. </p>
                                         <p class="paraIndent normalcolor"> To this end, we propose bowtie networks that jointly learn 3D geometric and semantic representations with feedback in the loop. Experimental evaluation on challenging fine-grained recognition datasets demonstrates that our synthesized images are realistic from multiple viewpoints and significantly improve recognition performance as ways of data augmentation, especially in the low-data regime. We further show that our approach is flexible and can be easily extended to incorporate other tasks, such as style guided synthesis.</p>
-                                        <p class="paraIndent normalcolor"> In this work, I am responsible for designing the whole architecture and fine tune the network. We have submitted a regular paper for ICLR 2021. </p>
-                                        <p class="paraIndent normalcolor"> Find the paper <a target="_blank" href="https://arxiv.org/abs/2008.06981"><strong>here</strong></a>. </p>
+                                        <p class="paraIndent normalcolor"> In this work, I am responsible for designing the whole architecture and fine tune the network. Our paper was accepted to ICLR 2021 as a poster paper. Find the paper <a target="_blank" href="https://arxiv.org/abs/2008.06981"><strong>here</strong></a>. </p>
                                     
                                     </div>
                                 </li>
@@ -202,7 +259,7 @@
                                     <div class="row">
                                         <div class="col-sm-4 col-md-3">
                                             <div class="image">
-                                                <img alt="image" src="img/projects/liftr.png"  class="img-responsive">
+                                                <img alt="image" src="img/projects/et.png"  class="img-responsive">
                                                 <div class="imageoverlay">
                                                     <i class="icon icon-search"></i>
                                                 </div>
@@ -219,14 +276,14 @@
                                         </div>
                                     </div>
                                     <div class="details">
-                                        <img src="files/fig1.png" width="100%"> </p>
+                                        <img src="files/ET.png" width="100%"> </p>
                                         <p class="paraIndent normalcolor"> Electron tomography is a widely used 3D macro-molecular structure reconstruction technology. The alignment of the tilt series is one of the most improvement processes that determine the tomography reconstruction quality. However, the data process for marker-free electron tomography remains a challenge, especially when the distortion of the projection has been proved and the correction becomes necessary. </p>
                                         <p class="paraIndent normalcolor"> During this projection, we propose a marker-free algorithm for the alignment of the tilt series. We first make an automatic detection and tracking of the stable ultrastructures with a deep neural network. We then refine the local patches of the projection parameters and produce the reprojection invariant landmarks. Finally, we rebuild the 3D cellular structure based on the landmarks and the projections. The proposed method obtains better performances than other state-of-the-art reconstruction algorithms.</p>
                                         <p class="paraIndent normalcolor">
                                         During this work, I propose and apply a deep neural network that can extract the deep features of each projection and find the interesting patches based on that.
                                         </p>
                                         <p class="paraIndent normalcolor">
-                                            Our paper was accepted to ISMB 2019. Find the paper <a target="_blank" href="https://academic.oup.com/bioinformatics/article/35/14/i249/5529170"><strong>here</strong></a> </p>.
+                                            Our paper was accepted to ISMB 2019. Find the paper <a target="_blank" href="https://academic.oup.com/bioinformatics/article/35/14/i249/5529170"><strong>here</strong></a>. </p>
                                             </p>
                                     </div>
                                 </li>
@@ -235,7 +292,7 @@
                                     <div class="row">
                                         <div class="col-sm-4 col-md-3">
                                             <div class="image">
-                                                <img alt="image" src="img/projects/scholar.png"  class="img-responsive">
+                                                <img alt="image" src="img/projects/expression.png"  class="img-responsive">
                                                 <div class="imageoverlay">
                                                     <i class="icon icon-search"></i>
                                                 </div>
@@ -252,40 +309,11 @@
                                         </div>
                                     </div>
                                     <div class="details">
-                                        <p><img src="files/fig3.png" width="100%"></p>
+                                        <p><img src="files/expression.png" width="100%"></p>
                                         <p class="paraIndent normalcolor"> Facial expression recognition is an important topic because it is the basis for many AI tasks. Numerous studies have been conducted in this area under the assumption that the human subject is always properly facing the camera. Such a condition, however, is too rigid because, in many real-life situations, the human face is not directly in front of the camera and maybe under extreme light conditions. However, few of the existing methods have considered the orientation of a face, thus limiting the performance of the previous models.</p>
                                         <p class="paraIndent normalcolor">To tackle this issue, we explore the fact that human expression is independent of the facial orientation. On the basis of this assumption, we propose a novel method to re-align facial images by reconstructing a 3D face model from a single image. Moreover, we implement an end to end deep neural network for single image facial expression recognition tasks, which utilize learning-based features, landmark features, and 3D features. A comprehensive evaluation toward three real-world datasets illustrates that the proposed model outperforms the state-of-the-art techniques in both large-scale and small-scale datasets. The superior of our model on effectiveness and robustness is also demonstrated in both laboratory conditions and wild images.</p>
                                         <p class="paraIndent normalcolor">This is an individual research project I took part in when I was exchanging in ANU. I am responsible for the whole project under the supervision of Shaodi. Our paper was accepted to ICCV 2019 workshops</p>
                                         <p class="paraIndent normalcolor"> Find the paper <a target="_blank" href="https://openaccess.thecvf.com/content_ICCVW_2019/html/CVPM/Bao_Single-Image_Facial_Expression_Recognition_Using_Deep_3D_Re-Centralization_ICCVW_2019_paper.html"><strong>here</strong>.</a>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="row">
-                                        <div class="col-sm-4 col-md-3">
-                                            <div class="image">
-                                                <img alt="image" src="img/projects/scissors.png"  class="img-responsive">
-                                                <div class="imageoverlay">
-                                                    <i class="icon icon-search"></i>
-                                                </div>
-
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-8 col-md-9">
-                                            <div class="meta">
-                                                <h3>Multimodal Sentiment Analysis with Deep Temporal Convolution</h3>
-                                                <p>Feb. 2018 - Sep. 2018</p>
-                                                <p>Supervisor: Hua Xu, Associated Professor, Tsinghua University</p>
-                                                <p>Video emotion analysis via visual, vocal and textual features.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="details">
-                                        <img src="files/fig2.png" width="100%"> </p>
-                                        <p class="paraIndent normalcolor"> With the surge of social websites, hundreds of online videos are generated every day, which makes multimodal sentiment analysis an increasingly popular research hot spot. There are three main characteristics of outstanding multimodal sentiment analysis models: real-time analysis of sentiment, accurate extraction of multimodal features, and efficient feature fusion strategy. The current well-performing models still have room for improvement regarding these characteristics. </p>
-                                        <p class="paraIndent normalcolor"> On the basis of this fact, in this project, we propose some improvement measures for each of these three aspects. We have designed a deep architecture to extract the features of the multimodal data, a temporal convolution neural network to improve the operational efficiency and also proposed an effective weighted fusion strategy. An entire model for multimodal sentiment analysis combining these three architectures is also proposed. Experimental results on the real-world dataset indicate that the proposed model outperforms the other state-of-the-art models in terms of accuracy, efficiency, and robustness. Targeted experiments also prove the superiority of the proposed deep feature-extracting network, temporal convolution network, and weighted fusion strategy.</p>
-                                        <p class="paraIndent normalcolor"> In this work, I am responsible for designing the whole architecture and fine tune the network. We have orgnized our work and formed a paper. </p>
-                                        <p class="paraIndent normalcolor"> Find the paper <a target="_blank" href="files/multimodal.pdf"><strong>here</strong></a>. </p>
                                     </div>
                                 </li>
 
