@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h2>Discovering Object that Can Move</h2>
+					<h3>In Submission</h3>
+				</header>
+
+				
+				<div class="container">
+						
+					<!-- Content -->
+						<section id="content">
+
+							<!-- Text -->
+								<section>
+									<table align=center width=600px>
+										<center>
+											<span style="font-size:18px"><a href="https://zpbao.github.io/">Zhipeng Bao</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="https://pvtokmakov.github.io/home/">Pavel Tokmakov</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="http://ajabri.github.io">Allan A. Jabri</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="https://yxw.web.illinois.edu/">Yu-Xiong Wang</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="https://adriengaidon.com/">Adrien Gaidon</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="http://www.cs.cmu.edu/~hebert/">Martial Hebert</a></span>
+										</center>	
+									</table>
+				
+						  			<table align=center width=650px style="font-size:18px;">
+										<center>
+											<span><a href=""> [Paper]</a></span>
+											&nbsp;&nbsp;&nbsp;
+											<span><a href=""> [Code]</a></span>
+											&nbsp;&nbsp;&nbsp;
+											<span><a href=""> [Talk]</a></span>
+											&nbsp;&nbsp;&nbsp;
+											<span><a href=""> [Poster]</a></span>
+										</center>
+											
+							
+					  				</table>
+									  <div class="row 100% uniform">
+										<div align="center"><span class="image fit"><img src="./image/fig-model.png" alt="" /></span></div>
+									</div>
+									<hr>
+
+									<h3>Abstract</h3>
+										This paper studies the problem of object discovery -- separating objects from the background without manual labels. Existing approaches rely on appearance cues, such as color, texture and location, to group pixels into object-like regions.
+										However, by relying on appearance alone, these methods fail to reliably separate objects from the background in cluttered scenes. 
+										This is a fundamental limitation, since the definition of an object is inherently ambiguous and context-dependent. To resolve this ambiguity, in this work we choose to focus on dynamic objects -- entities that are capable of moving independently in the world.
+										We then scale the recent auto-encoder based frameworks for unsupervised object discovery from toy, synthetic images to complex, real world scenes by simplifying their architecture, and
+										augmenting the resulting model with a weak learning signal from a motion segmentation algorithm. We demonstrate that, despite only capturing a small subset of the objects, this signal is enough to bias the model, which then learns to segment both moving and static instances of dynamic objects. 
+										We show that this model scales to our newly collected, photo-realistic synthetic dataset with street driving scenarios. Additionally, we leverage ground truth segmentation and flow annotations in this dataset for thorough ablation and evaluation.
+										Finally, our experiments on the real-world KITTI dataset demonstrate that the proposed approach outperforms both heuristic- and learning-based methods by capitalizing on motion cues.
+									<hr>
+
+									<h3>Visualizations</h3>
+									<div class="box alt">
+									<div class="row 100% uniform">
+										<div align="center"><span class="image fit"><img src="./image/visual.png" alt="" /></span></div>
+									</div>
+
+									<hr>
+
+									<h3>Dataset</h3>
+									<div class="box alt">
+									<div class="row 100% uniform">
+										<div align="center"><span class="image fit"><img src="./image/pd.png" alt="" /></span></div>
+									<p>The PD-2021 dataset is generated by the <a href="https://paralleldomain.com/">Parallel Domain</a> platform. We will release the dataset and the APIs soon.</p>
+								</div>
+									<hr>
+
+									<table align=center width=800px>
+										<center>
+											<span style="font-size:14pt"><center>
+												<a href="./figs/bibtext.txt">[Bibtex]</a>
+											</center>
+										</tr>
+									</table>
+
+										<hr>
+
+						</section>
+
+				</div>
+			</section>
+			
+
+	</body>
+</html>
