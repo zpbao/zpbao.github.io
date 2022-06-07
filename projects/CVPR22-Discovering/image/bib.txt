@@ -1,0 +1,6 @@
+@inproceedings{bao2022discovering,
+    Author = {Zhipeng Bao, Pavel Tokmakov, Allan Jabri, Yu-Xiong Wang, Adrien Gaidon, and Martial Hebert},
+    Title = {Discorying Object that Can Move},
+    Booktitle = {CVPR},
+    Year = {2022},
+}
