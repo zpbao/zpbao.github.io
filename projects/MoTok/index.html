@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title> </title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/jquery.scrollgress.min.js"></script>
+		<script src="js/jquery.scrolly.min.js"></script>
+		<script src="js/jquery.slidertron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Main -->
+			<section id="main" class="wrapper style1">
+				<header class="major">
+					<h2>Object Discovery from Motion Guided Tokens</h2>
+					<h3>CVPR 2023</h3>
+				</header>
+
+				
+				<div class="container">
+						
+					<!-- Content -->
+						<section id="content">
+
+							<!-- Text -->
+								<section>
+									<table align=center width=600px>
+										<center>
+											<span style="font-size:18px"><a href="https://zpbao.github.io/">Zhipeng Bao</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="https://pvtokmakov.github.io/home/">Pavel Tokmakov</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="https://yxw.web.illinois.edu/">Yu-Xiong Wang</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="https://adriengaidon.com/">Adrien Gaidon</a></span>
+											&nbsp;&nbsp;
+											<span style="font-size:18px"><a href="http://www.cs.cmu.edu/~hebert/">Martial Hebert</a></span>
+										</center>	
+									</table>
+				
+						  			<table align=center width=650px style="font-size:18px;">
+										<center>
+											<span><a href="https://arxiv.org/abs/2303.15555"> [Paper]</a></span>
+											&nbsp;&nbsp;&nbsp;
+											<span><a href="https://github.com/zpbao/MoTok"> [Code]</a></span>
+											&nbsp;&nbsp;&nbsp;
+											<span><a href=""> [Poster]</a></span>
+										</center>
+											
+							
+					  				</table>
+									<div align="center">
+										<img src="./image/fig-model.png" alt="alternatetext" width=98%>
+									</div>
+									<hr>
+
+									<h3>Abstract</h3>
+									Object discovery -- separating objects from the background without manual labels -- is a fundamental open challenge in computer vision. 
+									Previous methods struggle to go beyond clustering of low-level cues, whether handcrafted (e.g., color, texture) or learned (e.g., from auto-encoders). 
+									In this work, we augment the auto-encoder representation learning framework with two key components: motion-guidance and mid-level feature tokenization. 
+									Although both have been separately investigated, we introduce a new transformer decoder showing that their benefits can compound thanks to motion-guided vector quantization. 
+									We show that our architecture effectively leverages the synergy between motion and tokenization, improving upon the state of the art on both synthetic and real datasets. 
+									Our approach enables the emergence of interpretable object-specific mid-level features, demonstrating the benefits of motion-guidance (no labeling) and quantization (interpretability, memory efficiency).
+									<hr>
+
+									<h3>Visualizations</h3>
+									<div class="box alt">
+									<div class="row 100% uniform">
+										<p><h4>TRI-PD Slots+Tokens:</h4></p>
+										<div align="center">
+											<img src="./image/slot1.gif" alt="alternatetext" width=45%>
+											<img src="./image/slot2.gif" alt="alternatetext" width=45%>
+											<img src="./image/token1.gif" alt="alternatetext" width=45%>
+											<img src="./image/token2.gif" alt="alternatetext" width=45%>
+										</div>
+										<p><h4>KITTI Slots+Tokens:</h4></p>
+										<div align="center">
+											<img src="./image/kittislot1.png" alt="alternatetext" width=45%>
+											<img src="./image/kittislot2.png" alt="alternatetext" width=45%>
+											<img src="./image/kittitoken1.png" alt="alternatetext" width=45%>
+											<img src="./image/kittitoken2.png" alt="alternatetext" width=45%>
+										</div>
+									</div>
+
+									<hr>
+
+									<h3>Dataset</h3>
+									<div class="box alt">
+									<div class="row 100% uniform">
+										<div align="center">
+											<img src="./image/rgb1.gif" alt="alternatetext" width=24%>
+											<img src="./image/bd1.gif" alt="alternatetext" width=24%>
+											<img src="./image/ins1.gif" alt="alternatetext" width=24%>
+											<img src="./image/opt1.gif" alt="alternatetext" width=24%>
+										</div>
+									<p> TRI-PD dataset is generated by the <a href="https://paralleldomain.com/">Parallel Domain</a> platform. It contains RGB, bounding box, instance segmentation, optical flow, depth, camera calibrations, semantic segmentations, etc. Besides these annottaions, we have also rendered the moving objects and dynamic objects ground-truth for this dataset.</p> 
+									<p> Download link: <a href="https://drive.google.com/drive/folders/1q5AjqhoivJb67h9MZCgUtqb4CooDrZhC?usp=sharing">Simplified Dataset</a>. See our <a href="https://github.com/zpbao/MoTok">Repo</a> for details. </p>
+								</div>
+								</div>
+								<hr>
+									<h3>Previous Work</h3>
+									<a href="../CVPR22-Discovering/index.html">Discovering Objects that Can Move (CVPR22)</a>
+									<hr>
+									<h3>Caitation</h3>
+									Cite our paper with: <a href="./image/bib.txt">[Bibtex]</a>
+
+										<hr>
+
+						</section>
+
+				</div>
+			</section>
+			
+
+	</body>
+</html>

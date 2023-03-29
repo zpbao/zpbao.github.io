@@ -1,0 +1,6 @@
+@inproceedings{bao2023objects,
+    Author = {Bao, Zhipeng and Tokmakov, Pavel and Wang, Yu-Xiong and Gaidon, Adrien and Hebert, Martial},
+    Title = {Object Discovery from Motion-Guided Tokens},
+    Booktitle = {CVPR},
+    Year = {2023},
+}
