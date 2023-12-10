@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Separate-and-Enhance: Compositional Finetuning for Text2Image Diffusion Models.">
+  <meta name="keywords" content="Text2Image, Diffusion Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Separate-and-Enhance: Compositional Finetuning for Text2Image Diffusion Models</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Separate-and-Enhance: Compositional Finetuning for Text2Image Diffusion Models</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://zpbao.github.io/">Zhipeng Bao</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://yijunmaverick.github.io/">Yijun Li</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://krsingh.cs.ucdavis.edu/">Krishna Kumar Singh</a><sup>2</sup>,
+            </span>
+            <span class="author-block">
+              <a href="https://yxw.web.illinois.edu/">Yu-Xiong Wang</a><sup>3</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.cs.cmu.edu/~hebert">Martial Hebert</a><sup>1</sup>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>CMU,</span>
+            <span class="author-block"><sup>2</sup>Adobe Research,</span>
+            <span class="author-block"><sup>3</sup>UIUC</span>
+
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href=""
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                  </a>
+              </span>
+                  </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/demo1.mp4"
+                type="video/mp4">
+      </video>
+      <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/demo2.mp4"
+                type="video/mp4">
+      </video>
+      <h2>
+        Example of change of generated images and object attention during different finetuning steps with our proposed SepEn compositional finetuning. 
+      </h2>
+    </div>
+  </div>
+  <div class="container is-max-desktop">
+    <img src="./static/images/fig-cover.png" alt="alternatetext" width=90% >
+    <h2>
+      Visual comparisons between Stable Diffusion and our method.
+      Left: compositional finetuning with individual concepts. After finetuning, we are able to generate more aligned images with the text input of high quality.
+      Right: joint compositional finetuning with a large collection of concepts. After finetuning, the model keeps a high compositional capacity for unseen novel concepts.
+    </h2>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>Despite recent significant strides achieved by diffusion-based Text-to-Image (T2I) models, current systems are still less capable of ensuring decent compositional generation aligned with text prompts, particularly for the multi-object generation. </p>  
+          <p>This work illuminates the fundamental reasons for such misalignment, pinpointing issues related to low attention activation scores and mask overlaps. While previous research efforts have individually tackled these issues, we assert that a holistic approach is paramount. Thus, we propose two novel objectives, the Separate loss and the Enhance loss, that reduce object mask overlaps and maximize attention scores, respectively. </p>
+          <p>Our method diverges from conventional test-time-adaptation techniques, focusing on finetuning critical parameters, which enhances scalability and generalizability. Comprehensive evaluations demonstrate the superior performance of our model in terms of image realism, text-image alignment, and adaptability, notably outperforming prominent baselines. Ultimately, this research paves the way for T2I diffusion models with enhanced compositional capacities and broader applicability.</p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <!-- <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Single-concept comparisons</h2>
+        <div class="container is-max-desktop">
+          <img src="./static/images/fig-qualitative.png" alt="alternatetext" width=90% >
+        </div>
+        <h2 class="title is-3">large-scale experimental results</h2>
+        <div class="container is-max-desktop">
+          <img src="./static/images/fig-large.png" alt="alternatetext" width=90% >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Motivations</h2>
+        <div class="container is-max-desktop">
+          <img src="./static/images/fig-teaser.png" alt="alternatetext" width=90% >
+        </div>
+        <div class="content has-text-justified">
+          (Top) Failure cases and (Bottom) reasons of Stable Diffusion. Even state-of-the-art T2I models grapple with challenges when representing multiple objects with varying attributes. 
+          Two primary factors, demonstrated by the bottom two examples respectively, include: (1) low attention activation scores for certain objects and (2) the attention masks overlap.
+        </div>
+        <h2 class="title is-3">Our Solutions</h2>
+        <div class="container is-max-desktop">
+          <img src="./static/images/fig-model.png" alt="alternatetext" width=90% >
+        </div>
+        <div class="content has-text-justified">
+          The Separate loss (left) aims to split the attention masks of multiple objects while the Enhance loss (right) aims to amplify the attention activation scores of each target objects.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Extension to more than two concepts</h2>
+        <div class="container is-max-desktop">
+          <img src="./static/images/fig-multi.png" alt="alternatetext" width=90% >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{park2021nerfies,
+  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
+  title     = {Nerfies: Deformable Neural Radiance Fields},
+  journal   = {ICCV},
+  year      = {2021},
+}</code></pre>
+  </div>
+</section> -->
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
